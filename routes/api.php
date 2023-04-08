@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\ClassRoomController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -22,6 +23,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     });
 
     Route::resource('/courses', CourseController::class);
+    Route::resource('/classrooms', ClassRoomController::class);
 });
 
 Route::prefix('auth')->group(function () {

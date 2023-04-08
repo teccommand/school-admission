@@ -11,12 +11,12 @@ class ClassRoomHasCourse extends Pivot
 {
     use HasFactory;
 
-    public function ClassRooom(): HasOne
+    public function classRooom(): HasOne
     {
         return $this->hasOne(ClassRooom::class);
     }
 
-    public function Courses(): HasOne
+    public function course(): HasOne
     {
         return $this->hasOne(Courses::class);
     }

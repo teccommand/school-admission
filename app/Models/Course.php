@@ -20,8 +20,8 @@ class Course extends Model
         'description',
     ];
 
-    public function ClassRooms(): BelongsToMany
+    public function classrooms(): BelongsToMany
     {
-        return $this->belongsToMany(ClassRoom::class)->using(ClassRoomHasCourse::class);
+        return $this->belongsToMany(ClassRoom::class, 'class_room_has_courses')->using(ClassRoomHasCourse::class);
     }
 }
